@@ -1,0 +1,50 @@
+tabel master: 	user : role (su admin, admin, user, kdpm) 
+		events : id, nama, id_lab, tanggal, pemateri
+		lab : id. nama, 
+		bidang.minat.lbe : id, lab_id, nama 
+		feedback: 1, 2, 3, 4,
+tabel relasi: 	user events
+		user feedback (iduser, idfeedback, id events, isi)
+	
+userA = 1
+userB = 0
+userC = 1
+1. registrasi user:
+	nama:
+	nrp:
+	password:		
+	no.hp:
+	bidang.minat:
+	lab.lbe:
+	line:
+2. login: 	nrp :
+		pass:		
+
+3. dashboard : event 
+4. isi kusioner : 
+	materi.
+	deskripsi
+	kesimpulan	
+5. isi feedback
+6. liat event
+	
+
+1. adminlab :
+	- buat event (kuisioner)
+		input: 	judl
+			tanggal
+			pemateri
+	- buat feedback (assign user)
+	- rd user 
+	- crud events
+	- crud feedback 
+	- presensi (user yang ada di feedback)
+	- bidang.minat: kalau ada
+2. su admin : 	crud admin.lab
+		crud lab
+			
+3. kdpm : liat events (per user)
+	  liat feedback (per user)
+	  liat presensi
+
+Thoni, Satria, Bebet, Vivi, Awan
