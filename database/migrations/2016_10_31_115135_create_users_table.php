@@ -19,6 +19,8 @@ class CreateUsersTable extends Migration
                 $table->foreign('category_id')->references('id')->on('categories');
                 $table->integer('laboratory_id')->unsigned();
                 $table->foreign('laboratory_id')->references('id')->on('laboratories');
+                $table->integer('rule_id')->unsigned();
+                $table->foreign('rule_id')->references('id')->on('rules');
                 $table->string('lineID');
                 $table->timestamps();
             });
