@@ -54,7 +54,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RoleSeeder.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RoleSeeder.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/database/seeds/RoleSeeder.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="221">
@@ -64,10 +64,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LaboratorySeeder.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="LaboratorySeeder.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/database/seeds/LaboratorySeeder.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
+            <state relative-caret-position="324">
               <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
               <folding />
             </state>
@@ -355,7 +355,7 @@
       <workItem from="1477906252810" duration="7962000" />
       <workItem from="1477977882299" duration="2387000" />
       <workItem from="1478091029192" duration="778000" />
-      <workItem from="1478091900994" duration="1050000" />
+      <workItem from="1478091900994" duration="1101000" />
     </task>
     <task id="LOCAL-00001" summary="edit .env dan table role">
       <created>1477909148306</created>
@@ -385,11 +385,18 @@
       <option name="project" value="LOCAL" />
       <updated>1478092019591</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="roles seeder">
+      <created>1478093683745</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1478093683745</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13605000" />
+    <option name="totallyTimeSpent" value="13656000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1378" height="744" extended-state="0" />
@@ -457,7 +464,8 @@
     <MESSAGE value="tabel user" />
     <MESSAGE value="migration" />
     <MESSAGE value="roles table" />
-    <option name="LAST_COMMIT_MESSAGE" value="roles table" />
+    <MESSAGE value="roles seeder" />
+    <option name="LAST_COMMIT_MESSAGE" value="roles seeder" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -780,14 +788,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/seeds/LaboratorySeeder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2016_10_31_103121_create_events_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -842,6 +842,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/LaboratorySeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding />
         </state>
       </provider>
