@@ -11,9 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
+Route::get('/','Auth@index');
 Route::post('/login','Auth@doLogin');
 Route::get('/login', 'Auth@login');
+Route::get('/register', 'Auth@register');
+Route::get('/getbidang','Auth@getBidang');
