@@ -39,8 +39,10 @@ class Auth extends Controller
             
             if($flagLogin)
             {
-                $dataUser = array('nrp' => $flagLogin['nrp'], 'role' => $flagLogin['role_id'] );
+                $dataUser = array('id' => $flagLogin['id'], 'role' => $flagLogin['role_id'] );
                 $request->session()->put('user',$dataUser);
+
+                return "Hahaha";
             }
             else
             {
@@ -52,13 +54,13 @@ class Auth extends Controller
 
     public function index(Request $request)
     {
-        if(session('user')['nrp'])
+        if(session('user')['id'])
         {
 
         }
         else
         {
-            return view('auth/login');
+            return Redirect::to('login');
         }
     }
 
@@ -82,6 +84,7 @@ class Auth extends Controller
 
     public function login(Request $request)
     {
-    	return view('auth/login');
+        if(!session('user')['id']) return view('auth/login');
+        else return "Sudah login";
     }
 }
