@@ -15,9 +15,9 @@ class CreateUsersTable extends Migration
                 $table->string('password');
                 $table->string('phone');
                 $table->rememberToken();
-                $table->integer('category_id')->unsigned();
+                $table->integer('category_id')->unsigned()->nullable();
                 $table->foreign('category_id')->references('id')->on('categories');
-                $table->integer('laboratory_id')->unsigned();
+                $table->integer('laboratory_id')->unsigned()->nullable();
                 $table->foreign('laboratory_id')->references('id')->on('laboratories');
                 $table->integer('role_id')->unsigned();
                 $table->foreign('role_id')->references('id')->on('roles');

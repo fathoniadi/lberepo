@@ -3,16 +3,19 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
 use App\Http\Requests;
-use Illuminate\Support\Facades\Validator;
 use Illuminate\Html\FormFacade;
+use Illuminate\Support\Facades\Validator;
+use App\Http\Controllers\Controller;
 use App\User;
 use App\Laboratory;
-use Session;
+use Auth;
+use Hash;
 use DB;
-use Cookie;
-use Redirect;
+use Session;
+use File;
+use Response;
+
 
 class Auth extends Controller
 {
@@ -31,7 +34,6 @@ class Auth extends Controller
         }
         else
         {
-
         	$nrp = $request->input('nrp');
         	$password = hash('sha256',$request->input('password'));
 
@@ -79,7 +81,34 @@ class Auth extends Controller
 
     public function doRegister(Request $request)
     {
-    	
+        $rules = array(
+            'name' => 'required',
+            'NRP' => 'required',
+            'phone' => 'required',
+            'lineID' => 'required',
+            'password' => 'required'
+        );
+        $validator = Validator::make($request->all(), $rules);
+        if($validator->fails()){
+//            return view('')
+//                ->withErrors($validator);
+//                ->withInput(Input::except('password'));
+        }
+        else{
+            $check_username = User::where('NRP', '=', $request->input('NRP'))->first();
+            if($check_username){
+                Session::flash('fail', 'NRP sudah digunakan');
+//                return redirect()->route('');
+            }
+            else{
+                $user = new User($request->all());
+                $user->password = hash('sha256',$request->input('password'));
+                $user->role_id = 2;
+                $user->save();
+                Session::flash('success', '');
+//                return redirect()->route('');
+            }
+        }
     }
 
     public function login(Request $request)
