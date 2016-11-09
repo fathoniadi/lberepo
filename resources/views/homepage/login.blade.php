@@ -15,6 +15,12 @@
                 @endforeach
 			</div>
 			@endif
+			@if(session('message'))
+				<div class="notif" class="login-panel panel panel-default" style="background-color: green; color:white; padding: 1em">
+				<span class="pull-right close-notif" >x</span>
+				<p style="color:white">{{session('message')}}<p>
+			</div>
+			@endif
 			<div class="login-panel panel panel-default">
 				<div class="panel-body">
 					<form role="form" method="POST" action="">

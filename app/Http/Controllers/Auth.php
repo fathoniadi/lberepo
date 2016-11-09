@@ -94,7 +94,7 @@ class Auth extends Controller
         $rules = array(
             'name' => 'required',
             'nrp' => 'required|integer',
-            'phone' => 'required|integer',
+            'phone' => 'required',
             'lab'=>'required',
             'lineID' => 'required',
             'password' => 'required'
@@ -117,7 +117,7 @@ class Auth extends Controller
                 $user->nrp = $request->input('nrp');
                 $user->laboratory_id = $request->input('lab');
                 $user->save();
-                return Redirect::to('register')->with("message","Terima kasih sudah mendaftar. Silahkan login :)");
+                return Redirect::to('login')->with("message","Terima kasih sudah mendaftar. Silahkan login :)");
             }
         }
     }

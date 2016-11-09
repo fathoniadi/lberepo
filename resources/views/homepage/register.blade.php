@@ -15,12 +15,6 @@
                 @endforeach
 			</div>
 			@endif
-			@if(session('message'))
-				<div class="notif" class="login-panel panel panel-default" style="background-color: green; color:white; padding: 1em">
-				<span class="pull-right close-notif" >x</span>
-				<p style="color:white">{{session('message')}}<p>
-			</div>
-			@endif
 			<div class="login-panel panel panel-default">
 				<div class="panel-body">
 					<form role="form" method="POST">
@@ -39,7 +33,7 @@
 							</div>
 							<!-- <label style="padding-left: 0.9em;"><h5>Pilih LBE :</h5></label> -->
 							<div class="form-group">
-								<select id="labLbe" name="lab" class="form-control" >
+								<select required id="labLbe" name="lab" class="form-control" >
 									<option value="">Pilih LBE</option>
 									@foreach($labs as $lab)
 										<option value="{{$lab->id}}">{{$lab->name}}</option>
@@ -49,7 +43,7 @@
 								<!-- <label style="padding-left: 0.9em;"><h5>Pilih Bidang :</h5></label> -->
 							<div class="form-group">
 								<div class="pilihlbe">
-									<select id="bidangminat" name="category_id" style="display: none" class="form-control">
+									<select required id="bidangminat" name="category_id" style="display: none" class="form-control">
 										
 									</select>
 								</div>

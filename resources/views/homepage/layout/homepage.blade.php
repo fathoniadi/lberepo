@@ -68,7 +68,7 @@
 	            dataType:"json",
 	            success:function(response){
 	                       console.log(response);
-	                       if(!response=='')
+	                       if(!response.length==0)
 	                       {
 	                       		for(i=0;i<response.length;i++)
 	                       		{
@@ -76,6 +76,7 @@
 	                       			if(i==0) $('#bidangminat').html("<option value=''>Pilih Bidang</option>");
 	                       			$('#bidangminat').append("<option value='"+response[i].id+"'>"+response[i].name+"</option>");
 	                       		}
+	                       		//alert("asasd");
 	                       }
 	                       else
 	                       {
