@@ -9,12 +9,13 @@ use Illuminate\Support\Facades\Validator;
 use App\Http\Controllers\Controller;
 use App\User;
 use App\Laboratory;
-use Auth;
+use App\Category;
 use Hash;
 use DB;
 use Session;
 use File;
 use Response;
+use Redirect;
 
 
 class Auth extends Controller
@@ -37,7 +38,7 @@ class Auth extends Controller
         	$nrp = $request->input('nrp');
         	$password = hash('sha256',$request->input('password'));
 
-            $flagLogin = User::where('password',$password)->where('nrp',$nrp)->first();
+            $flagLogin = User::where('password',$password)->where('nrp',$nrp)->select('id','role_id')->first();
             
             if($flagLogin)
             {
@@ -69,51 +70,61 @@ class Auth extends Controller
 
     public function register(Request $request)
     {
-        $data['lab'] = Laboratory::all();
-        echo json_encode($data['lab']);
+        $data['labs'] = Laboratory::all();
+        return view('homepage/register', $data);
     }
 
     public function getBidang(Request $request)
     {
         $lab = $request->input('lab');
-        
+        if(isset($lab))
+        {
+            $categoryLab = Category::where('laboratory_id',$lab)->get();
+            echo json_encode($categoryLab);
+        }
+        else
+        {
+            $response = array('status'=>500);
+            echo json_encode($response);
+        }
     }
 
     public function doRegister(Request $request)
     {
         $rules = array(
             'name' => 'required',
-            'NRP' => 'required',
-            'phone' => 'required',
+            'nrp' => 'required|integer',
+            'phone' => 'required|integer',
+            'lab'=>'required',
             'lineID' => 'required',
             'password' => 'required'
         );
         $validator = Validator::make($request->all(), $rules);
         if($validator->fails()){
-//            return view('')
-//                ->withErrors($validator);
-//                ->withInput(Input::except('password'));
+            return Redirect::to('register')
+                ->withErrors($validator);
         }
         else{
-            $check_username = User::where('NRP', '=', $request->input('NRP'))->first();
+            $check_username = User::where('nrp', '=', $request->input('nrp'))->first();
             if($check_username){
-                Session::flash('fail', 'NRP sudah digunakan');
-//                return redirect()->route('');
+                return Redirect::to('register')->withErrors("Akun sudah teregistrasi");
             }
             else{
                 $user = new User($request->all());
                 $user->password = hash('sha256',$request->input('password'));
                 $user->role_id = 2;
+                if($request->input('category_id')) $user->category_id = $request->input('category_id');
+                $user->nrp = $request->input('nrp');
+                $user->laboratory_id = $request->input('lab');
                 $user->save();
-                Session::flash('success', '');
-//                return redirect()->route('');
+                return Redirect::to('register')->with("message","Terima kasih sudah mendaftar. Silahkan login :)");
             }
         }
     }
 
     public function login(Request $request)
     {
-        if(!session('user')['id']) return view('auth/login');
+        if(!session('user')['id']) return view('homepage/login');
         else return "Sudah login";
     }
 }
