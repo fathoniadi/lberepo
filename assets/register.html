@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Forms</title>
+
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/datepicker3.css" rel="stylesheet">
+<link href="css/styles.css" rel="stylesheet">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
+<!-- <script type="text/javascript" src="/js/select_jquery.js"></script>
+ -->
+<!--[if lt IE 9]>
+<script src="js/html5shiv.js"></script>
+<script src="js/respond.min.js"></script>
+<![endif]-->
+
+</head>
+
+<body>
+	
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4">
+				<div class="logo">
+					<center><img style="width:40%; padding-bottom:1em" src="newajkbluesky.jpg"></center>
+				</div>
+				<div class="login-panel panel panel-default">
+					<center><div class="panel-heading" style="padding-top:0.1em"><h3><b>REGISTER</b></h3></div></center>
+					<div class="panel-body">
+						<form role="form">
+							<fieldset>
+								<div class="form-group">
+									<input class="form-control" placeholder="Nama" name="nama" type="text" autofocus="">
+								</div>
+								<div class="form-group">
+									<input class="form-control" placeholder="NRP" name="nrp" type="text" autofocus="">
+								</div>
+								<div class="form-group">
+									<input class="form-control" placeholder="Password" name="password" type="password" value="">
+								</div>
+								<div class="form-group">
+									<input class="form-control" placeholder="No. Telepon" name="telepon" type="text" autofocus="">
+								</div>
+								<!-- <label style="padding-left: 0.9em;"><h5>Pilih LBE :</h5></label> -->
+								<div class="pilihlbe">
+									<select id="lbe" class="form-control" >
+									<option>Pilih LBE</option>
+									<option>AJK</option>
+									<option>LP</option>
+									<option>MI</option>
+									</select><br>
+									<!-- <label style="padding-left: 0.9em;"><h5>Pilih Bidang :</h5></label> -->
+									<select id="bidangminat" class="form-control">
+								<!-- Dependent Select option field -->
+									</select>
+								</div>
+								
+								
+								<div class="form-group">
+									<br><input class="form-control" placeholder="ID Line" name="line" type="text" autofocus="">
+								</div>
+								<a href="register.html" class="btn btn-primary" style="width:100%">Register</a>
+							</fieldset>
+						</form>
+					</div>
+				</div>
+			</div><!-- /.col-->
+			<div class="col-sm-4 col-sm-offset-4">
+				<center><p style="margin-top:0.5em">Have an account? <a href="login.html">Login</a></p></center>
+			</div>
+		</div><!-- /.row -->	
+	</div>
+		
+		
+
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/chart.min.js"></script>
+	<script src="js/chart-data.js"></script>
+	<script src="js/easypiechart.js"></script>
+	<script src="js/easypiechart-data.js"></script>
+	<script src="js/bootstrap-datepicker.js"></script>
+	<script>
+		!function ($) {
+			$(document).on("click","ul.nav li.parent > a > span.icon", function(){		  
+				$(this).find('em:first').toggleClass("glyphicon-minus");	  
+			}); 
+			$(".sidebar span.icon").find('em:first').addClass("glyphicon-plus");
+		}(window.jQuery);
+
+		$(window).on('resize', function () {
+		  if ($(window).width() > 768) $('#sidebar-collapse').collapse('show')
+		})
+		$(window).on('resize', function () {
+		  if ($(window).width() <= 767) $('#sidebar-collapse').collapse('hide')
+		})
+
+		$(document).ready(function() {
+// Initializing arrays with city names.
+		var AJK = [
+		{display: "Washington, D.C.",value: "WashingtonDC"},
+		{display: "California",value: "California"}];
+
+		// Function executes on change of first select option field.
+		$("#lbe").change(function() {
+		var select = $("#lbe option:selected").val();
+		switch (select) {
+		case "AJK":
+		bidangminat(AJK);
+		break;
+		default:
+		$("#bidangminat").empty();
+		$("#bidangminat").append("<option>Pilih Bidang</option>");
+		break;
+		}
+		});
+		// Function To List out Cities in Second Select tags
+		function bidangminat(arr) {
+		$("#bidangminat").empty(); //To reset cities
+		$("#bidangminat").append("<option>Pilih Bidang</option>");
+		$(arr).each(function(i) { //to list cities
+		$("#bidangminat").append("<option value=\"" + arr[i].value + "\">" + arr[i].display + "</option>")
+		});
+		}
+		});
+	</script>	
+</body>
+
+</html>

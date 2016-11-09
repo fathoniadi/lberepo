@@ -7,9 +7,11 @@ Version 1.0
 /*Global Styles*/
 
 body {
-	background: #f1f4f7;
+	/*background: #f1f4f7;*/
+	background:white;
 	padding-top: 50px;
 	color: #5f6468;
+	font-family: 'Open Sans', sans-serif;
 }
 
 p {
@@ -158,8 +160,8 @@ fieldset[disabled] .btn-primary:active,
 .btn-primary.disabled.active,
 .btn-primary[disabled].active,
 fieldset[disabled] .btn-primary.active {
-	background-color: #30a5ff;
-	border-color: #30a5ff;
+	background-color: #53A1FE;
+	border-color: #53A1FE;
 }
 
 .btn-success,
@@ -929,7 +931,18 @@ h1.page-header {
 	overflow: scroll;
 }
 
+#lbe{
+	width:100%;
+	background-color: white;
+	border: 1px solid #eee;
+	box-shadow: none;
+}
 
+#lbe:focus {
+	border: 1px solid #30a5ff;
+	outline: 0;
+	box-shadow: inset 0px 0px 0px 1px #30a5ff;
+}
 
 
 
