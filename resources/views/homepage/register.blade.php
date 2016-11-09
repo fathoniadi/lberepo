@@ -67,7 +67,7 @@
 		</div><!-- /.col-->
 		<div class="col-sm-4 col-sm-offset-4">
 			<!-- <p><h5></h5><a href="register.html">Register</a></p> -->
-			<center><p style="margin-top:0.5em">Don't have account? <a href="register.html">Register</a></p>
+			<center><p style="margin-top:0.5em">Punya akun? <a href="{{url('/')}}/login">Login</a></p>
 		
 		</div>
 	</div><!-- /.row -->	
