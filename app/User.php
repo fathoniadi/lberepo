@@ -9,7 +9,7 @@ class User extends Model
 {
     protected $table = 'users';
     protected $dates = ['deleted_at'];
-    protected $fillable = ['name', 'NRP', 'phone', 'lineID'];
+    protected $fillable = ['name', 'nrp', 'phone', 'lineID'];
     protected $hidden = ['password', 'remember_token'];
 
     public function role()

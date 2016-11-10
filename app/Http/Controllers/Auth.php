@@ -93,11 +93,12 @@ class Auth extends Controller
     {
         $rules = array(
             'name' => 'required',
-            'nrp' => 'required|integer',
+            'nrp' => 'required',
             'phone' => 'required',
             'lab'=>'required',
             'lineID' => 'required',
-            'password' => 'required'
+            'password' => 'required',
+            'retype-password' => 'required'
         );
         $validator = Validator::make($request->all(), $rules);
         if($validator->fails()){
@@ -105,6 +106,10 @@ class Auth extends Controller
                 ->withErrors($validator);
         }
         else{
+            if($request->input('retype-password') != $request->input('password')){
+                return Redirect::to('register')
+                    ->withErrors("Password miss matches");
+            }
             $check_username = User::where('nrp', '=', $request->input('nrp'))->first();
             if($check_username){
                 return Redirect::to('register')->withErrors("Akun sudah teregistrasi");

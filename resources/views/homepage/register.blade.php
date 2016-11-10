@@ -17,7 +17,7 @@
 			@endif
 			<div class="login-panel panel panel-default">
 				<div class="panel-body">
-					<form role="form" method="POST">
+					<form role="form" method="POST" action="{{ url('/register') }}">
 						<fieldset>
 							<div class="form-group">
 								<input class="form-control" placeholder="Nama" name="name" type="text" autofocus="">
@@ -27,6 +27,9 @@
 							</div>
 							<div class="form-group">
 								<input class="form-control" placeholder="Password" name="password" type="password" value="">
+							</div>
+							<div class="form-group">
+								<input class="form-control" placeholder="Retype Password" name="retype-password" type="password" value="">
 							</div>
 							<div class="form-group">
 								<input class="form-control" placeholder="No. Telepon" name="phone" type="text" autofocus="">
@@ -43,7 +46,7 @@
 								<!-- <label style="padding-left: 0.9em;"><h5>Pilih Bidang :</h5></label> -->
 							<div class="form-group">
 								<div class="pilihlbe">
-									<select required id="bidangminat" name="category_id" style="display: none" class="form-control">
+									<select id="bidangminat" name="category_id" style="display: none" class="form-control">
 										
 									</select>
 								</div>
@@ -53,7 +56,7 @@
 							<div class="form-group">
 								<input class="form-control" placeholder="ID Line" name="lineID" type="text" autofocus="">
 							</div>
-							<button class="btn btn-primary" style="width:100%">Register</button>
+							<button class="btn btn-primary" type="submit" style="width:100%">Register</button>
 						</fieldset>
 					</form>
 				</div>
