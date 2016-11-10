@@ -59,6 +59,7 @@
 			{
 				$('#bidangminat').html('');
 	            $('#bidangminat').css('display','none');
+	        	$('#bidangminat').prop('required',false);
 			}
 			else {
 				$.ajax({
@@ -76,12 +77,14 @@
 	                       			if(i==0) $('#bidangminat').html("<option value=''>Pilih Bidang</option>");
 	                       			$('#bidangminat').append("<option value='"+response[i].id+"'>"+response[i].name+"</option>");
 	                       		}
-	                       		//alert("asasd");
+
+	                       		$('#bidangminat').prop('required',true);
 	                       }
 	                       else
 	                       {
 	                       		$('#bidangminat').html('');
 	                       		$('#bidangminat').css('display','none');
+	                       		$('#bidangminat').prop('required',false);
 	                       }
 	                    },
 	            error: function(response){
