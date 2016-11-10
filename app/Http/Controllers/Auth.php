@@ -94,7 +94,7 @@ class Auth extends Controller
     {
         $rules = array(
             'name' => 'required',
-            'nrp' => 'required',
+            'nrp' => 'required|integer',
             'phone' => 'required',
             'lab'=>'required',
             'lineID' => 'required',
