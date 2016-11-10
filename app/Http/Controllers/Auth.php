@@ -70,6 +70,7 @@ class Auth extends Controller
 
     public function register(Request $request)
     {
+        if(session('user')['id']) return Redirect::to('login');
         $data['labs'] = Laboratory::all();
         return view('homepage/register', $data);
     }

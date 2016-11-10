@@ -1,4 +1,7 @@
 @extends('homepage.layout.homepage')
+@section('title')
+	Login
+@endsection
 @section('content')
 <div class="container">
 	<div class="row">
