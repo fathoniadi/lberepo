@@ -24,7 +24,7 @@ class Auth extends Controller
     {
 
     	$validator = Validator::make($request->all(), [
-            'nrp' => 'required|integer',
+            'nrp' => 'required',
             'password' => 'required',
         ]);
 
