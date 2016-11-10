@@ -19,3 +19,4 @@ Route::get('/logout', 'Auth@logout');
 Route::post('/getbidang','Auth@getBidang');
 Route::post('/register', 'Auth@doRegister');
 Route::get('/dashboard', 'Dashboard@index');
+Route::post('/coba','Dashboard@coba');

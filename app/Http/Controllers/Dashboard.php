@@ -29,4 +29,12 @@ class Dashboard extends Controller
             return Redirect::to('login');
         }
     }
+
+
+    public function coba(Request $request)
+    {
+        var_dump($request->input('nrp'));
+        
+    }
+
 }

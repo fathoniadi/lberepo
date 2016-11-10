@@ -20,6 +20,7 @@
 <body>
 	
 	@yield('content')
+	<center><span style="text-align: center; margin: 0 auto; padding-bottom: 4em">Tim Mantab Jiwa AJK</span></center>
 	
 	
 		

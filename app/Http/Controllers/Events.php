@@ -65,6 +65,11 @@ class Events extends Controller
     	//aktor user, use case user bisa melihat list event
     }
 
+    public function labEvent()
+    {
+        //aktor kdpm, superadmin dapat melihat list event yang sudah dibuat
+    }
+
 
 
 }
