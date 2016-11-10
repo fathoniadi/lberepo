@@ -54,6 +54,11 @@ class User extends Controller
     	//aktor adminlab, kdpm. untuk melihat detail profile dan aktivitas user
     }
 
+    public function listUser()
+    {
+    	//aktor kdpm, adminLab, superadmin. untuk melihat list user perrole(jabatan)
+    }
+
 
 
 }
