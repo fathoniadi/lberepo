@@ -38,14 +38,14 @@ class Auth extends Controller
         	$nrp = $request->input('nrp');
         	$password = hash('sha256',$request->input('password'));
 
-            $flagLogin = User::where('password',$password)->where('nrp',$nrp)->select('id','role_id')->first();
+            $flagLogin = User::where('password',$password)->where('nrp',$nrp)->select('id','role_id','nrp')->first();
             
             if($flagLogin)
             {
-                $dataUser = array('id' => $flagLogin['id'], 'role' => $flagLogin['role_id'] );
+                $dataUser = array('id' => $flagLogin['id'], 'role' => $flagLogin['role_id'],'nrp' => $flagLogin['nrp'] );
                 $request->session()->put('user',$dataUser);
 
-                return "Hahaha";
+                return Redirect::to('dashboard');
             }
             else
             {
@@ -59,7 +59,7 @@ class Auth extends Controller
     {
         if(session('user')['id'])
         {
-
+            return Redirect::to('dashboard');
         }
         else
         {
@@ -70,7 +70,7 @@ class Auth extends Controller
 
     public function register(Request $request)
     {
-        if(session('user')['id']) return Redirect::to('login');
+        if(session('user')['id']) return Redirect::to('dashboard');
         $data['labs'] = Laboratory::all();
         return view('homepage/register', $data);
     }
@@ -131,6 +131,13 @@ class Auth extends Controller
     public function login(Request $request)
     {
         if(!session('user')['id']) return view('homepage/login');
-        else return "Sudah login";
+        else return Redirect::to('dashboard');
+    }
+
+    public function logout(Request $request)
+    {
+        
+        $request->session()->flush();
+        return Redirect::to('login')->with("message","Terima kasih, jangan lupa datang LBE :)");
     }
 }

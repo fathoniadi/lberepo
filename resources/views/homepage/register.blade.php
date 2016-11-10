@@ -49,7 +49,7 @@
 								<!-- <label style="padding-left: 0.9em;"><h5>Pilih Bidang :</h5></label> -->
 							<div class="form-group">
 								<div class="pilihlbe">
-									<select required id="bidangminat" name="category_id" style="display: none" class="form-control">
+									<select id="bidangminat" name="category_id" style="display: none" class="form-control">
 
 									</select>
 								</div>
