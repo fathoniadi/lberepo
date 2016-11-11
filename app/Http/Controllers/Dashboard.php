@@ -22,7 +22,7 @@ class Dashboard extends Controller
     {
         if(session('user')['id'])
         {
-
+            return view('dashboard/index');
         }
         else
         {
