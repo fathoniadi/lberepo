@@ -9,6 +9,7 @@
 <link href="{{url('/assets')}}/css/datepicker3.css" rel="stylesheet">
 <link href="{{url('/assets')}}/css/styles.css" rel="stylesheet">
 <link href="{{url('/assets')}}/css/bootstrap-multiselect.css" rel="stylesheet">
+<link href="{{url('/assets')}}/css/bootstrap-table.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
 
 <script src="{{url('/assets')}}/js/lumino.glyphs.js"></script>
@@ -31,6 +32,7 @@
 	<script src="{{url('/assets')}}/js/easypiechart.js"></script>
 	<script src="{{url('/assets')}}/js/easypiechart-data.js"></script>
 	<script src="{{url('/assets')}}/js/bootstrap-datepicker.js"></script>
+	<script src="{{url('/assets')}}/js/bootstrap-table.js"></script>
 	<script type="text/javascript">
 	    $(document).ready(function() {
 	       $('.selectpicker').multiselect({

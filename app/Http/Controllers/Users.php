@@ -17,7 +17,7 @@ use File;
 use Response;
 use Redirect;
 
-class User extends Controller
+class Users extends Controller
 {
     public function index()
     {
@@ -57,6 +57,7 @@ class User extends Controller
     public function listUser()
     {
     	//aktor kdpm, adminLab, superadmin. untuk melihat list user perrole(jabatan)
+        return view('dashboard/user');
     }
 
 

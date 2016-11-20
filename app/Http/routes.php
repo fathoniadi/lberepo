@@ -19,4 +19,5 @@ Route::get('/logout', 'Auth@logout');
 Route::post('/getbidang','Auth@getBidang');
 Route::post('/register', 'Auth@doRegister');
 Route::get('/dashboard', 'Dashboard@index');
+Route::get('/dashboard/user', 'Users@listUser');
 Route::post('/coba','Dashboard@coba');
