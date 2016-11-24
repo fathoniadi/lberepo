@@ -11,7 +11,8 @@
 <link href="{{url('/assets')}}/css/bootstrap-multiselect.css" rel="stylesheet">
 <link href="{{url('/assets')}}/css/bootstrap-table.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
-
+<script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+<script>tinymce.init({ selector:'textarea' });</script>
 <script src="{{url('/assets')}}/js/lumino.glyphs.js"></script>
 
 </head>

@@ -49,19 +49,7 @@
 		</div>
 		<div class="row">
 			<div class="col-lg-12">
-				<center><h1 class="page-header">Selamat Datang di LBE, {{session('user')['nrp']}}</h1></center>
-				
-				<!-- <form method="post" action="{{url('/coba')}}">
-				<select class="selectpicker" multiple name="nrp[]">
-					<option value="1">1</option>
-					<option value="2">2</option>
-					<option value="3">3</option>
-					<option value="4">4</option>
-					<option value="5">5</option>
-					<option value="6">6</option>
-				</select>
-				<button type="submit">Ok</button>
-			</form> -->
+				<p>content</p> <!-- isi konten untuk event -->
 			</div>
 		</div>
 		

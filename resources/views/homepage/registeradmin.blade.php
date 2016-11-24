@@ -38,7 +38,7 @@
 								<input class="form-control" placeholder="No. Telepon" name="phone" type="text" autofocus="">
 							</div>
 							<!-- <label style="padding-left: 0.9em;"><h5>Pilih LBE :</h5></label> -->
-							<!-- <div class="form-group">
+							<div class="form-group">
 								<div class="pilihrole">
 									<select id="" name="role_id" class="form-control">
 										<option>Pilih Role</option>
@@ -47,7 +47,7 @@
 										<option>KDPM</option>
 									</select>
 								</div>
-							</div> -->
+							</div>
 
 							<div class="form-group">
 								<select required id="labLbe" name="lab" class="form-control" >
