@@ -21,7 +21,7 @@ USE `lberepo` ;
 -- -----------------------------------------------------
 -- Table `lberepo`.`lab`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `lberepo`.`lab` ;
+DROP TABLE IF EXISTS `lberepo`.`lab` ;`1`
 
 CREATE TABLE IF NOT EXISTS `lberepo`.`lab` (
   `id_lab` INT NOT NULL AUTO_INCREMENT,
