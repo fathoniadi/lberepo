@@ -37,8 +37,8 @@
       <file leaf-file-name="2016_11_22_140409_create_event_user_table.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/database/migrations/2016_11_22_140409_create_event_user_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="12" column="34" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
+            <state relative-caret-position="136">
+              <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -109,8 +109,8 @@
         <option value="$PROJECT_DIR$/resources/views/homepage/login.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/User.php" />
         <option value="$PROJECT_DIR$/assets/database.sql" />
-        <option value="$PROJECT_DIR$/database/migrations/2016_11_22_140409_create_event_user_table.php" />
         <option value="$PROJECT_DIR$/app/Event_User.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2016_11_22_140409_create_event_user_table.php" />
       </list>
     </option>
   </component>
@@ -462,7 +462,7 @@
       <workItem from="1479460775372" duration="1846000" />
       <workItem from="1479577598105" duration="227000" />
       <workItem from="1479820509952" duration="1787000" />
-      <workItem from="1480078236697" duration="800000" />
+      <workItem from="1480078236697" duration="822000" />
     </task>
     <task id="LOCAL-00001" summary="edit .env dan table role">
       <created>1477909148306</created>
@@ -562,11 +562,18 @@
       <option name="project" value="LOCAL" />
       <updated>1480078973161</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="event_user table">
+      <created>1480079058165</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1480079058165</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41467000" />
+    <option name="totallyTimeSpent" value="41489000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1378" height="744" extended-state="0" />
@@ -621,7 +628,8 @@
     <MESSAGE value="dashboard" />
     <MESSAGE value="login" />
     <MESSAGE value="event_user model" />
-    <option name="LAST_COMMIT_MESSAGE" value="event_user model" />
+    <MESSAGE value="event_user table" />
+    <option name="LAST_COMMIT_MESSAGE" value="event_user table" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -964,8 +972,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2016_11_22_140409_create_event_user_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="12" column="34" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
+        <state relative-caret-position="136">
+          <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
           <folding />
         </state>
       </provider>
