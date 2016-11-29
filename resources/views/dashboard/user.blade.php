@@ -14,6 +14,8 @@
 					<li class="dropdown pull-right">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg>{{session('user')['nrp']}} <span class="caret"></span></a>
 						<ul class="dropdown-menu" role="menu">
+							<!-- <li><a href="#"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Profile</a></li>
+							<li><a href="#"><svg class="glyph stroked gear"><use xlink:href="#stroked-gear"></use></svg> Settings</a></li> -->
 							<li><a href="{{url('logout')}}"><svg class="glyph stroked cancel"><use xlink:href="#stroked-cancel"></use></svg> Logout</a></li>
 						</ul>
 					</li>
@@ -32,16 +34,15 @@
 		</form>
 		<ul class="nav menu">
 			<li class="active"><a href="{{url('/dashboard')}}"><svg class="glyph stroked dashboard-dial"><use xlink:href="#stroked-dashboard-dial"></use></svg> Dashboard</a></li>
-			<li><a href=""><svg class="glyph stroked pencil"><use xlink:href="#stroked-pencil"></use></svg> Isi Kuesioner</a></li>
-			<li><a href=""><svg class="glyph stroked app-window"><use xlink:href="#stroked-app-window"></use></svg> Event</a></li>
+			<li><a href="{{url('/isikuesioner')}}"><svg class="glyph stroked pencil"><use xlink:href="#stroked-pencil"></use></svg> Isi Kuesioner</a></li>
+			<li><a href="{{url('/user')}}"><svg class="glyph stroked app-window"><use xlink:href="#stroked-app-window"></use></svg> Daftar Peserta</a></li>
 		</ul>
 
 	</div>
 @endsection
 @section('content')
-
-	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">			
-			<div class="row">
+<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">			
+		<div class="row">
 				<div class="col-lg-12">
 					<div class="panel panel-default">
 						<div class="panel-heading">Daftar Peserta</div>
@@ -49,10 +50,6 @@
 							<table data-toggle="table" data-show-refresh="true" data-show-toggle="true" data-show-columns="true" data-search="true" data-select-item-name="toolbar1" data-pagination="true" data-sort-name="name" data-sort-order="desc">
 							    <thead>
 							    <tr>
-							        <!-- <th data-field="state" data-checkbox="true" >Item ID</th>
-							        <th data-field="id" data-sortable="true">Item ID</th>
-							        <th data-field="name"  data-sortable="true">Item Name</th>
-							        <th data-field="price" data-sortable="true">Item Price</th> -->
 							        <th data-field="no" data-sortable="true">No</th>
 							        <th data-field="nrp" data-sortable="true">NRP</th>
 							        <th data-field="nama"  data-sortable="true">Nama</th>
@@ -66,7 +63,7 @@
 							    	<tr>
 							    		<td>1</td>
 							    		<td>5115100119</td>
-							    		<td>Cahya Putra Hikmawan</td>
+							    		<td>Hikmawan</td>
 							    		<td>IoT</td>
 							    		<td>085850059599</td>
 							    		<td>cp.hikmawan</td>
@@ -78,21 +75,6 @@
 	        								</button></center>
 	        							</td>
 							    	</tr>
-							    	<!-- <tr>
-							    		<td>1</td>
-							    		<td>1</td>
-							    		<td>1</td>
-							    		<td>1</td>
-							    		<td>1</td>
-							    		<td>1</td>
-							    		<td><button type="button" class="btn btn-info btn-sm">
-	          								<span class="glyphicon glyphicon-edit"></span> Edit
-	        								</button> 
-	        								<button type="button" class="btn btn-danger btn-sm">
-	          								<span class="glyphicon glyphicon-remove"></span> Remove 
-	        								</button>
-	        							</td>
-							    	</tr> -->
 							    </tbody>
 							</table>
 						</div>
@@ -108,10 +90,6 @@
 							<table data-toggle="table" data-show-refresh="true" data-show-toggle="true" data-show-columns="true" data-search="true" data-select-item-name="toolbar1" data-pagination="true" data-sort-name="name" data-sort-order="desc">
 							     <thead>
 							    <tr>
-							        <!-- <th data-field="state" data-checkbox="true" >Item ID</th>
-							        <th data-field="id" data-sortable="true">Item ID</th>
-							        <th data-field="name"  data-sortable="true">Item Name</th>
-							        <th data-field="price" data-sortable="true">Item Price</th> -->
 							        <th data-field="no" data-sortable="true">No</th>
 							        <th data-field="nrp" data-sortable="true">NRP</th>
 							        <th data-field="nama"  data-sortable="true">Nama</th>
@@ -137,27 +115,11 @@
 	        								</button></center>
 	        							</td>
 							    	</tr>
-							    	<!-- <tr>
-							    		<td>1</td>
-							    		<td>1</td>
-							    		<td>1</td>
-							    		<td>1</td>
-							    		<td>1</td>
-							    		<td>1</td>
-							    		<td><button type="button" class="btn btn-info btn-sm">
-	          								<span class="glyphicon glyphicon-edit"></span> Edit
-	        								</button> 
-	        								<button type="button" class="btn btn-danger btn-sm">
-	          								<span class="glyphicon glyphicon-remove"></span> Remove 
-	        								</button>
-	        							</td>
-							    	</tr> -->
 							    </tbody>
 							</table>
 						</div>
 					</div>
 				</div>
 			</div><!--/.row-->
-		</div>
-
+	</div>
 @endsection

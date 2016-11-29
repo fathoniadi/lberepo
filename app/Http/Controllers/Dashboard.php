@@ -31,7 +31,7 @@ class Dashboard extends Controller
     }
 
 
-    public function coba(Request $request)
+    public function isi(Request $request)
     {
         return view('dashboard/isikuesioner');
     }

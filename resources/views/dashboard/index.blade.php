@@ -34,34 +34,22 @@
 		</form>
 		<ul class="nav menu">
 			<li class="active"><a href="{{url('/dashboard')}}"><svg class="glyph stroked dashboard-dial"><use xlink:href="#stroked-dashboard-dial"></use></svg> Dashboard</a></li>
-			<li><a href=""><svg class="glyph stroked pencil"><use xlink:href="#stroked-pencil"></use></svg> Isi Kuesioner</a></li>
-			<li><a href=""><svg class="glyph stroked app-window"><use xlink:href="#stroked-app-window"></use></svg> Event</a></li>
+			<li><a href="{{url('/isikuesioner')}}"><svg class="glyph stroked pencil"><use xlink:href="#stroked-pencil"></use></svg> Isi Kuesioner</a></li>
+			<li><a href="{{url('/user')}}"><svg class="glyph stroked app-window"><use xlink:href="#stroked-app-window"></use></svg> Daftar Peserta</a></li>
 		</ul>
 
 	</div>
 @endsection
 @section('content')
 <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">			
-		<div class="row">
+		<!-- <div class="row">
 			<ol class="breadcrumb">
 				<li><a href="#"><svg class="glyph stroked home"><use xlink:href="#stroked-home"></use></svg></a></li>
 			</ol>
-		</div>
+		</div> -->
 		<div class="row">
 			<div class="col-lg-12">
 				<center><h1 class="page-header">Selamat Datang di LBE, {{session('user')['nrp']}}</h1></center>
-				
-				<!-- <form method="post" action="{{url('/coba')}}">
-				<select class="selectpicker" multiple name="nrp[]">
-					<option value="1">1</option>
-					<option value="2">2</option>
-					<option value="3">3</option>
-					<option value="4">4</option>
-					<option value="5">5</option>
-					<option value="6">6</option>
-				</select>
-				<button type="submit">Ok</button>
-			</form> -->
 			</div>
 		</div>
 		
