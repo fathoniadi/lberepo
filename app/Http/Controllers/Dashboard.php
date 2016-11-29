@@ -33,8 +33,7 @@ class Dashboard extends Controller
 
     public function coba(Request $request)
     {
-        var_dump($request->input('nrp'));
-        
+        return view('dashboard/isikuesioner');
     }
 
 }

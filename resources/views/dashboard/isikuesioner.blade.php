@@ -27,11 +27,6 @@
 @endsection
 @section('sidebar')
 <div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
-		<form role="search">
-		<!-- 	<div class="form-group">
-				<input type="text" class="form-control" placeholder="Search">
-			</div> -->
-		</form>
 		<ul class="nav menu">
 			<li class="active"><a href="{{url('/dashboard')}}"><svg class="glyph stroked dashboard-dial"><use xlink:href="#stroked-dashboard-dial"></use></svg> Dashboard</a></li>
 			<li><a href=""><svg class="glyph stroked pencil"><use xlink:href="#stroked-pencil"></use></svg> Isi Kuesioner</a></li>
@@ -49,15 +44,36 @@
 		</div>
 		<div class="row">
 			<div class="col-lg-12">
-				<p>Materi</p>
-				<textarea>Materi</textarea>
-				<p>Deskripsi</p>
-				<textarea>Deskripsi</textarea>
-				<p>Kesimpulan</p>
-				<textarea>Kesimpulan</textarea>
-				<!-- bikin button -->
-			</div>
-		</div>
+				<div class="panel panel-default">
+					<div class="panel-heading">Formulir Feedback</div>
+					<div class="panel-body">
+						<div class="col-md-12">
+							<form role="form">
+								<div class="form-group">
+									<label>Tanggal</label>
+									<input class="form-control" type="date">
+								</div>
+								<div class="form-group">
+									<label>Materi</label>
+									<textarea class="form-control" rows="3"></textarea>
+								</div>
+								<div class="form-group">
+									<label>Deskripsi</label>
+									<textarea class="form-control" rows="3"></textarea>
+								</div>
+								<div class="form-group">
+									<label>Feedback (Pesan/Saran)</label>
+									<textarea class="form-control" rows="3"></textarea>
+								</div>
+								<div class="form-group">
+									<button type="submit" class="btn btn-primary">Submit Button</button>
+								</div>
+							</div>	
+						</form>
+					</div>
+				</div>
+			</div><!-- /.col-->
+		</div><!-- /.row -->
 		
 	</div>
 @endsection
