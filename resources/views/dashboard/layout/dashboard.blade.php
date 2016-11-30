@@ -32,7 +32,7 @@
 	<script>
 		tinymce.init({
 			selector: '#eventNote',
-			height: 500,
+			height: 250,
 			theme: 'modern',
 		  	plugins: [
 			    'advlist autolink lists link image charmap print preview hr anchor pagebreak',
@@ -50,7 +50,10 @@
 		  	content_css: [
 			    '//fonts.googleapis.com/css?family=Lato:300,300i,400,400i',
 			    '//www.tinymce.com/css/codepen.min.css'
-		  	]
+		  	],
+		  	file_browser_callback: function(field_name, url, type, win) {
+        	if(type=='image') $('#my_form input').click();
+    		}
 		 });
 	</script>
 	<script type="text/javascript">

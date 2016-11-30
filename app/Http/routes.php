@@ -21,4 +21,6 @@ Route::post('/register', 'Auth@doRegister');
 Route::get('/dashboard', 'Dashboard@index');
 Route::get('/user', 'Users@listUser');
 Route::get('/isikuesioner','Dashboard@isi');
-
+Route::get('/event','Dashboard@lihat');
+Route::get('/catatan','Dashboard@catat');
+Route::post('/saveCatatan','Dashboard@saveCatat');

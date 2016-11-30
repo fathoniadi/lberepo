@@ -30,10 +30,23 @@ class Dashboard extends Controller
         }
     }
 
-
     public function isi(Request $request)
     {
         return view('dashboard/isikuesioner');
     }
 
+    public function lihat(Request $request)
+    {
+        return view('dashboard/event');
+    }
+
+    public function catat(Request $request)
+    {
+        return view('dashboard/catatan');
+    }
+
+     public function saveCatat(Request $request)
+    {
+        echo $request->input("eventNote");
+    }
 }
